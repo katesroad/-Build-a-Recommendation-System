@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="courserajava1">
+    <CLASSES>
+      <root url="jar:///usr/lib/jvm/courserajava.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar:///usr/lib/jvm/courserajava.jar!/" />
+    </SOURCES>
+  </library>
+</component>
