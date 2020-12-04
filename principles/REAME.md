@@ -1,6 +1,6 @@
 # README
 
-- Seven stops to solve any programming problem
+- Seven steps to solve any programming problem
   >1. Work example by hand
   >2. Write down what you did
   >3. Find patterns
@@ -19,3 +19,11 @@ If you are lack of domain knowledge, you need to find it before you proceed.
   >4. Read documentation
   >5. Use the live coding videos and assignments
   >6. Ask for help in forum
+
+
+## Coding
+
+>1. Seperation of concerns
+>2. One method has single responsibility
+>3. Build something which you already has confidence in
+
