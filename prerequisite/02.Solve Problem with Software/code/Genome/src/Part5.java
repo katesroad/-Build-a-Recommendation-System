@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 /**
  * The start codeon is atg, the stop code on can be tga, tag and taa
  * The valid dna has a distance of multiple 3 between the start codeon and the end codon.
@@ -73,6 +75,7 @@ public class Part5 {
 
     public static void main(String[] args) {
         Part5 part5 = new Part5();
-        part5.findGene("CTGCCTGCATGATCGTA");
+        String DNA = "AAATGCCCTAACTAGATTAAGAAACC";
+        part5.findGene(DNA.toLowerCase());
     }
 }
