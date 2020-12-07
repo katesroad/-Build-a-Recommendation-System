@@ -150,7 +150,7 @@ public class Part3 {
     public static void main(String args[]) {
         Part3 part3 = new Part3();
 //        read string from test file
-        final String dna = new FileResource("./dna/brca1line.fa").asString();
+        final String dna = new FileResource("./dna/Axl2p.fa").asString();
         StorageResource sr = part3.getAllGenes(dna.toLowerCase());
         int count = 0;
         for (String s : sr.data()) {
