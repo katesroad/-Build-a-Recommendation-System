@@ -14,3 +14,7 @@
 >1. Primitive 
 >2. Object type         
 
+## Relationships between classes
+
+>1. Has a
+>3. Uses a
