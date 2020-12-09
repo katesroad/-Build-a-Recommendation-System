@@ -15,16 +15,19 @@ public class BabyBirthAssignment {
     public static void main(String[] args) {
         BabyBirthAssignment example = new BabyBirthAssignment();
 
-        System.out.println("totalBirth:");
-//        example.totalBirths();
-        System.out.println("\n");
-
-//        example.getRank(2012, "Mason", "M");
-        System.out.println("\n");
-
+        example.yearOfHighestRank("Alice", "M");
+//
+//        System.out.println("totalBirth:");
+////        example.totalBirths();
+//        System.out.println("\n");
+//
+//        example.getRank(2012, "Mason", "F");
+//        System.out.println("\n");
+//
 //        example.getName(2012, 2, "M");
-
-        example.whatIsNameInYear("Isabella", 2012, "F", 2014);
+//        System.out.println("\n");
+//
+//        example.whatIsNameInYear("Isabella", 2012, "F", 2014);
 
     }
 
@@ -63,7 +66,7 @@ public class BabyBirthAssignment {
     public int getRank(int year, String name, String gender) {
         String fileName = this.getFileNameByYear(year);
         FileResource fr = new FileResource(fileName);
-        CSVParser parser = fr.getCSVParser();
+        CSVParser parser = fr.getCSVParser(false);
         int curRowIndex = 0;
         boolean nameIsExist = false;
         for (CSVRecord curRecord : parser) {
@@ -81,11 +84,12 @@ public class BabyBirthAssignment {
         if (nameIsExist) {
             System.out.println("For year=" + year
                     + ", name=" + name + " and gender="
-                    + gender + ", the rank=" + curRowIndex);
-            return curRowIndex;
+                    + gender + ", the rank=" + curRowIndex + "\n");
+            return curRowIndex + 1;
         } else {
             System.out.println("For year=" + year
                     + "and gender=" + gender
+                    + "and name =" + name
                     + ". Did not find this person.");
             return -1;
         }
@@ -99,7 +103,7 @@ public class BabyBirthAssignment {
     public String getName(int year, int rank, String gender) {
         String fileName = this.getFileNameByYear(year);
         FileResource fr = new FileResource(fileName);
-        CSVParser parser = fr.getCSVParser();
+        CSVParser parser = fr.getCSVParser(false);
 
         String name = "NO NAME";
         int curRank = 0;
@@ -133,6 +137,9 @@ public class BabyBirthAssignment {
         String newName = "No Name";
 
         int rank = this.getRank(year, name, gender);
+
+        System.out.println(name + " rank at " + rank + " at year " + year);
+
         if (rank == -1) return newName;
         else newName = this.getName(year, newYear, gender);
 
