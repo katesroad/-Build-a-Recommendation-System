@@ -25,5 +25,5 @@ If you are lack of domain knowledge, you need to find it before you proceed.
 
 >1. Seperation of concerns
 >2. One method has single responsibility
->3. Build something which you already has confidence in
+>3. Build something based on which you already has confidence in
 
