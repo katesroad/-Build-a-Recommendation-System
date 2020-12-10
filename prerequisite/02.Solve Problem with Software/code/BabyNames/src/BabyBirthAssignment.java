@@ -157,14 +157,27 @@ public class BabyBirthAssignment {
      */
     public int yearOfHighestRank(String name, String gender) {
         DirectoryResource dr = new DirectoryResource();
-        int year = -1;
-        int rank = -1;
+        int highestRankYear = -1;
+        int highestRank = -1;
         for (File curF : dr.selectedFiles()) {
-            System.out.println(curF.getName());
+            String fileName = curF.getName().replace("yob", "");
+            try {
+                int year = Integer.parseInt(fileName.replace(".csv", ""));
+                int yearRankForName = this.getRank(year, name, gender);
+                if (yearRankForName > highestRank) {
+                    highestRank = yearRankForName;
+                    highestRankYear = year;
+                }
+                System.out.println(year);
+            } catch (Exception e) {
+                System.out.println("Exception happens for file: " + fileName);
+            }
+
         }
 
+        System.out.println("The highest rank for name=" + name + ",gender=" + gender + "is year=" + highestRankYear);
 
-        return year;
+        return highestRankYear;
     }
 
     /**
