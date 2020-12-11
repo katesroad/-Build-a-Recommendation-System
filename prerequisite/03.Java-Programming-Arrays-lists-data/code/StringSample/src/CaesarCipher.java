@@ -10,7 +10,7 @@ public class CaesarCipher {
         CaesarCipher example = new CaesarCipher();
         String content = "At noon be in the conference room with your hat on for a surprise party. YELL LOUD!";
         example.encrypt(content, 15);
-        example.encryptTwoKeys(content, 8, 21);
+        example.encryptTwoKeys(content, -18, 21);
     }
 
     /**
