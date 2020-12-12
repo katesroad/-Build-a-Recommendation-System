@@ -9,7 +9,6 @@ public class RandomNumbersAndArrays {
     public int[] simulate(int rolls) {
         int[] result = new int[13];
         Random random = new Random();
-        double rollsDouble = new Double(rolls);
 
         double[] result2 = new double[13];
 
